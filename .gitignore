@@ -1,0 +1,122 @@
+# Build
+build/
+!desktop/src/build/
+!desktop/src/build/**
+dist/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+*.whl
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+.venv-online/
+venv/
+env/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.testmondata*
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.hypothesis/
+
+# IDE / editors
+.vscode/
+.idea/
+.codebuddy
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# uv
+.uv/
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dashboard/dist/
+# NOTE: src/octop/dashboard/ (built SPA) is intentionally tracked in this snapshot.
+
+# Ship Meituan pt-passport runtime; override global node_modules/ ignore.
+!src/octop/infra/agents/experts/library/meituan-living-assistant/skills/meituan-deals/scripts/node_modules/
+!src/octop/infra/agents/experts/library/meituan-living-assistant/skills/meituan-deals/scripts/node_modules/**
+
+# Local databases
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
+
+# Logs / runtime
+*.log
+logs/
+
+# Local monorepo dev helpers (not for upstream)
+scripts/dev-local-link.sh
+
+# Local downloaded platform-tools for mobile DinD testing
+.tools/
+.tools-sdk/
+
+# Local fnpack CLI (build-fpk.sh) and FPK scratch dirs
+.verify/fnpack
+.verify/fnpack.exe
+.verify/fnpack.partial
+.verify/fnpack.exe.partial
+.buildtmp.*/
+
+# FnOS native FPK install target (CI / local pack scratch; do not vendor)
+fnos/native/app/site-packages/
+
+# Local agent planning docs (not for upstream)
+docs/superpowers/
+scripts/lh_image_install_octop_tencentos.sh
+.worktrees/
+# Local conda environment
+.conda-octop/
+
+# Local desktop build artifacts and vendored runtimes (not source; too large for GitHub)
+desktop/portable/release/
+desktop/portable/runtimes/
+desktop/portable/wheels/
+desktop/src/build/*/python-runtime/
+desktop/src/build/*/uia-runtime/
